@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navigation from "@/components/navigation";
 import localFont from "@next/font/local";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const greycliff = localFont({
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${greycliff.variable} font-sans`}>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

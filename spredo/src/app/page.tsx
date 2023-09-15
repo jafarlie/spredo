@@ -56,7 +56,7 @@ export default function Home() {
             <div className="w-1/3 p-4 bg-darkJelly">
               <div className="bg-blue-400 aspect-w-1 aspect-h-1">
                 <h1 className="text-xl">01</h1>
-                <div className="mt-6 text-xl">
+                <div className="mt-9 text-xl">
                   <span>No More Bread Tearing</span>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="w-1/3 p-4 bg-nutty">
               <div className="aspect-w-1 aspect-h-1">
                 <h1 className="text-xl">02</h1>
-                <div className="mt-6 text-xl">
+                <div className="mt-9 text-xl">
                   <span>Say No More To Making Mess</span>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function Home() {
             <div className="w-1/3 p-4 bg-midnightGreen">
               <div className="bg-blue-300 aspect-w-1 aspect-h-1">
                 <h1 className="text-xl">03</h1>
-                <div className="mt-6 text-xl">
+                <div className="mt-9 text-xl">
                   <span>Forget About Dishwashing</span>
                 </div>
               </div>
