@@ -2,8 +2,22 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navigation from '@/components/navigation'
+import localFont from '@next/font/local'
 
 const inter = Inter({ subsets: ['latin'] })
+const greycliff = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Fontspring-DEMO-greycliffcf-medium.otf',
+      weight: '400'
+    },
+    {
+      path: '../../public/fonts/Fontspring-DEMO-greycliffcf-bold.otf',
+      weight: '700'
+    }
+  ],
+  variable: '--font-greycliff'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${greycliff.variable} font-sans`}>
         <Navigation />
         {children}
       </body>
