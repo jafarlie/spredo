@@ -84,9 +84,12 @@ const Navbar = () => {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             onClick={() => toggleVisibility()}
           >
-            {showHamburgerIcon && <>
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" /> </>}
+            {showHamburgerIcon && (
+              <>
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />{" "}
+              </>
+            )}
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -137,11 +140,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="./Logo.png"
-                alt=""
-              />
+              <img className="h-8 w-auto" src="./Logo.png" alt="" />
             </a>
             <button
               type="button"
