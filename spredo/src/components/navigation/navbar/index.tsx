@@ -97,13 +97,13 @@ const Navbar = () => {
             href="#features"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            Features
+            About Us
           </a>
           <a
             href="#pricing"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            Pricing
+            Products
           </a>
 
           <a
@@ -117,7 +117,7 @@ const Navbar = () => {
             href="demo"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
-            Demo
+            Contact Us
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
