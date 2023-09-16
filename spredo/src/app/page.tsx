@@ -1,6 +1,7 @@
 import Image from "next/image";
 import nespressoMachine from "../../public/NespressoMachine.png";
 import sandwichMaking from "../../public/sandwichmaking.jpg";
+import storyOfFounders from "../../public/StoryOfFounders.jpg";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
               </h2>
               <button
                 style={{ color: "white" }}
-                className="px-8 w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="px-8 text-lg w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 Treat Yourself Today
               </button>
@@ -77,6 +78,52 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-bread mt-6">
+        <div className="bg-midnightGreen relative mx-auto">
+          <div className="h-screen w-full flex">
+            {/* Left-hand side */}
+            <div className="w-1/2 p-4">
+              <div className="w-1/2 ml-32 mt-16">
+                <h1
+                  className="text-4xl mb-4 font-extrabold tracking-wide"
+                  style={{ color: "#dba76c" }}
+                >
+                  The Story of Two Guys Who were too Lazy to Make a Sandwich
+                </h1>
+                <p
+                  style={{ color: "white" }}
+                  className="mt-12 text-lg font-bold"
+                >
+                  Your content here. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Vivamus lacinia odio vitae vestibulum. Your
+                  content here. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                </p>
+              </div>
+            </div>
+
+            {/* Right-hand side */}
+            <div className="w-1/2 relative">
+              <Image
+                alt="founders"
+                src={storyOfFounders}
+                className="absolute top-0 bottom-0 w-auto h-full object-cover"
+              ></Image>
+            </div>
+            <svg
+              className="absolute bottom-0 w-full"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+            >
+              <path
+                fill="#fff7e1"
+                fill-opacity="1"
+                d="M0,160L80,176C160,192,320,224,480,208C640,192,800,128,960,128C1120,128,1280,192,1360,224L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+              ></path>
+            </svg>
           </div>
         </div>
       </section>
