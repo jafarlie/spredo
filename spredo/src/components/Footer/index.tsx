@@ -50,15 +50,6 @@ const Footer = () => {
                       Meet the Team
                     </a>
                   </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-700 transition hover:opacity-75"
-                    >
-                      Accounts Review
-                    </a>
-                  </li>
                 </ul>
               </div>
 
