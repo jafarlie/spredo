@@ -74,7 +74,7 @@ const Navbar = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="">
+          <a href="/" className="">
             <span className="sr-only">Spredo</span>
             <img className="h-8 w-auto" src="./Logo.png" alt="" />
           </a>

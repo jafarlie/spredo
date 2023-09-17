@@ -22,7 +22,8 @@ const config: Config = {
       darkJelly: '#640223',
       midnightGreen: '#05393c',
       bread: '#fff7e1',
-      light: '#ffffff'
+      light: '#ffffff',
+      black: '#000000'
     },
   },
   plugins: [],

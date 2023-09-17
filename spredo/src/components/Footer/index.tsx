@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="bg-nutty mt-9" style={{ color: "white" }}>
+      <footer className="bg-nutty" style={{ color: "white" }}>
         <div className="mx-auto max-w-screen-l px-4 py-16 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-start lg:gap-8">
             <div className="flex lg:flex-1">
