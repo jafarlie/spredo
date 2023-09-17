@@ -1,7 +1,49 @@
+"use client";
 import Image from "next/image";
 import ContactImage from "../../../../public/Contact.jpg";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
 const ContactForm = () => {
+  // States for each input field
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [body, setBody] = useState<string>("");
+  // Event handlers
+  const handleFirstNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleLastNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setLastName(event.target.value);
+  };
+
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubjectChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSubject(event.target.value);
+  };
+
+  const handleBodyChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setBody(event.target.value);
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Here you would typically send the form data to a server or handle it otherwise.
+    console.log({
+      firstName,
+      lastName,
+      email,
+      subject,
+      body,
+    });
+  };
+
   return (
     <>
       <div className="relative flex h-screen w-full bg-cover bg-center justify-between">
@@ -26,6 +68,7 @@ const ContactForm = () => {
         {/* Right column - 2/3 */}
         <div className="w-2/3 px-12 py-6 z-10 h-5/6 justify-center align-center flex mt-14">
           <form
+            onSubmit={handleSubmit}
             className="w-2/3 bg-bread px-3 py-3 rounded-lg"
             style={{ color: "black" }}
           >
@@ -41,6 +84,8 @@ const ContactForm = () => {
                   type="text"
                   id="firstName"
                   name="firstName"
+                  value={firstName}
+                  onChange={handleFirstNameChange}
                   className="p-2 w-full border rounded-md"
                 />
               </div>
@@ -56,6 +101,8 @@ const ContactForm = () => {
                   type="text"
                   id="lastName"
                   name="lastName"
+                  value={lastName}
+                  onChange={handleLastNameChange}
                   className="p-2 w-full border rounded-md"
                 />
               </div>
@@ -72,6 +119,8 @@ const ContactForm = () => {
                 type="email"
                 id="email"
                 name="email"
+                value={email}
+                onChange={handleEmailChange}
                 className="p-2 w-full border rounded-md"
               />
             </div>
@@ -87,6 +136,8 @@ const ContactForm = () => {
                 type="text"
                 id="subject"
                 name="subject"
+                value={subject}
+                onChange={handleSubjectChange}
                 className="p-2 w-full border rounded-md"
               />
             </div>
@@ -101,6 +152,8 @@ const ContactForm = () => {
               <textarea
                 id="body"
                 name="body"
+                value={body}
+                onChange={handleBodyChange}
                 className="p-2 w-full border rounded-md"
                 rows={5}
               ></textarea>
