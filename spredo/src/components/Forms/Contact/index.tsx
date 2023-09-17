@@ -53,7 +53,7 @@ const ContactForm = () => {
           layout="fill"
           objectFit="cover"
         ></Image>
-        <div className="absolute inset-0 opacity-20"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         {/* Left column - 1/3 */}
         <div className="w-1/3 flex justify-center z-10 items-center p-4 bg-gray-200">
           <div className="ml-12" style={{ color: "white" }}>
