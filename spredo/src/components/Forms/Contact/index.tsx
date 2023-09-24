@@ -47,16 +47,16 @@ const ContactForm = () => {
   return (
     <>
       <div className="relative flex h-screen w-full bg-cover bg-center justify-between">
-        <Image
+        {/* <Image
           src={ContactImage}
           alt="Contact Image"
           layout="fill"
           objectFit="cover"
-        ></Image>
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+        ></Image> */}
+        {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
         {/* Left column - 1/3 */}
         <div className="w-1/3 flex justify-center z-10 items-center p-4 bg-gray-200">
-          <div className="ml-12" style={{ color: "white" }}>
+          <div className="ml-12 mb-6" style={{ color: "black" }}>
             <h1 className="text-6xl font-bold pb-3">Send us a message 😎</h1>
             <h2 className="text-2xl mt-6 text-gray-600">
               Reach out to us with any questions you might have, whether you are
@@ -69,7 +69,7 @@ const ContactForm = () => {
         <div className="w-2/3 px-12 py-6 z-10 h-5/6 justify-center align-center flex mt-14">
           <form
             onSubmit={handleSubmit}
-            className="w-2/3 bg-bread px-3 py-3 rounded-lg"
+            className="w-2/3 px-3 py-3 rounded-lg"
             style={{ color: "black" }}
           >
             <div className="flex mb-4 space-x-4">
@@ -78,10 +78,11 @@ const ContactForm = () => {
                   htmlFor="firstName"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  First Name:
+                  First Name*
                 </label>
                 <input
                   type="text"
+                  required
                   id="firstName"
                   name="firstName"
                   value={firstName}
@@ -95,7 +96,7 @@ const ContactForm = () => {
                   htmlFor="lastName"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Last Name:
+                  Last Name
                 </label>
                 <input
                   type="text"
@@ -113,12 +114,13 @@ const ContactForm = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Email:
+                Email*
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
+                required
                 value={email}
                 onChange={handleEmailChange}
                 className="p-2 w-full border rounded-md"
@@ -130,12 +132,13 @@ const ContactForm = () => {
                 htmlFor="subject"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Subject:
+                Subject*
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
+                required
                 value={subject}
                 onChange={handleSubjectChange}
                 className="p-2 w-full border rounded-md"
@@ -147,11 +150,13 @@ const ContactForm = () => {
                 htmlFor="body"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Body:
+                Body*
               </label>
               <textarea
                 id="body"
                 name="body"
+                required
+                minLength={120}
                 value={body}
                 onChange={handleBodyChange}
                 className="p-2 w-full border rounded-md"

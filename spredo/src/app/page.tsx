@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <section className="bg-bread">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto">
           <div className="h-screen w-screen flex">
             {/* Left Div */}
-            <div className="font-sans bg-gray-300 w-1/2 h-full flex justify-center items-start flex-col p-4 space-y-6 mb-6">
+            <div className="font-sans bg-gray-300 w-1/2 h-full flex justify-center items-start flex-col p-4 space-y-6 mb-6 ml-24">
               <h1 className="text-6xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
@@ -19,7 +19,7 @@ export default function Home() {
               </h2>
               <button
                 style={{ color: "white" }}
-                className="px-8 text-lg w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="px-8 text-xl w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 Treat Yourself Today
               </button>
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-bread mt-6">
+      <section className="bg-bread">
         <div className="bg-midnightGreen relative mx-auto">
           <div className="h-screen w-full flex">
             {/* Left-hand side */}
@@ -124,6 +124,20 @@ export default function Home() {
                 d="M0,160L80,176C160,192,320,224,480,208C640,192,800,128,960,128C1120,128,1280,192,1360,224L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
               ></path>
             </svg>
+          </div>
+        </div>
+      </section>
+      <section className="bg-bread">
+        <div className="container mx-auto px-4">
+          <div className="h-[450px]">
+            <div className="w-full text-center">
+              <h1
+                className="text-4xl mb-4 font-extrabold tracking-wide"
+                style={{ color: "#05393c" }}
+              >
+                Why Should You Get Spredo?
+              </h1>
+            </div>
           </div>
         </div>
       </section>
