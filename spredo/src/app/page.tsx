@@ -2,6 +2,38 @@ import Image from "next/image";
 import nespressoMachine from "../../public/NespressoMachine.png";
 import sandwichMaking from "../../public/sandwichmaking.jpg";
 import storyOfFounders from "../../public/StoryOfFounders.jpg";
+import { Carousel } from "antd";
+import React from "react";
+
+const contentStyle: React.CSSProperties = {
+  height: "300px",
+  marginTop: "50px",
+  color: "white",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#dba76c",
+};
+
+const data = [
+  {
+    name: "Ustin Zarubin",
+    position: "CEO, Streamdal",
+    review:
+      "Seems like everyone enjoys the unique spreads offered by Spredo. The device is work of art, simple in design and use. Definitely recommend having this device in your kitchen.",
+  },
+  {
+    name: "Kyle Grishenko",
+    position: "CEO, ActionHomeServices",
+    review:
+      "Our team is always on the go and Spredo is something we needed. The portable device makes our live easy and the Spredo flavours are just amazing.",
+  },
+  {
+    name: "Joshua Wattson",
+    position: "CEO, SimpliDesign",
+    review:
+      "Rarely do you come across something that exceeds your expectations right out of the box. This does that and then some. Highly recommend!",
+  },
+];
 
 export default function Home() {
   return (
@@ -137,6 +169,26 @@ export default function Home() {
               >
                 Why Should You Get Spredo?
               </h1>
+              <div
+                style={contentStyle}
+                className="rounded-tl-3xl rounded-br-3xl"
+              >
+                <Carousel style={{ color: "white" }} autoplay>
+                  {data.map((customer, idx) => (
+                    <div key={idx} className="p-4 rounded shadow-lg">
+                      <div className="text-center">
+                        <h2 className="text-2xl font-semibold">
+                          {customer.name}
+                        </h2>
+                        <p className="text-gray-500">{customer.position}</p>
+                      </div>
+                      <div className="mt-24 mb-12 text-xl">
+                        <p className="text-gray-800">"{customer.review}"</p>
+                      </div>
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
             </div>
           </div>
         </div>

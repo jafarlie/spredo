@@ -30,9 +30,9 @@ const Footer = () => {
               <div className="col-span-2 sm:col-span-1"></div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 text-xl">Company</p>
+                <p className="font-medium text-gray-900 text-2xl">Company</p>
 
-                <ul className="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-md">
                   <li>
                     <a
                       href="#"
@@ -54,14 +54,14 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 text-xl">
+                <p className="font-medium text-gray-900 text-2xl">
                   Helpful Links
                 </p>
 
-                <ul className="mt-6 space-y-4 text-sm">
+                <ul className="mt-6 space-y-4 text-md">
                   <li>
                     <a
-                      href="#"
+                      href="/contact"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       Contact
