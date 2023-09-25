@@ -1,4 +1,7 @@
 "use client";
+import Logo from "../../../public/Logo.png";
+import Image from "next/image";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -6,23 +9,23 @@ const Footer = () => {
       <footer className="bg-nutty" style={{ color: "white" }}>
         <div className="mx-auto max-w-screen-l px-4 py-16 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-start lg:gap-8">
-            <div className="flex lg:flex-1">
-              <a href="#" className="">
-                <span className="sr-only">Social Analytics</span>
-                <img className="h-8 w-auto" src="./VH-1.png" alt="" />
-              </a>
-            </div>
-
             <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
               <div className="col-span-2">
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    Get the latest news!
+                  <Image
+                    src={Logo}
+                    alt="Company Logo of Spredo"
+                    width={200}
+                    height={200}
+                    className=""
+                  ></Image>
+                  <h2 className="text-2xl font-bold text-gray-900 mt-3">
+                    We are committed to excellence!
                   </h2>
 
-                  <p className="mt-4 text-gray-500">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Esse non cupiditate quae nam molestias.
+                  <p className="mt-4 text-md text-gray-500">
+                    Here at Spredo we value quality service, quality flavours
+                    and prioritizing customer experience.
                   </p>
                 </div>
               </div>
@@ -38,7 +41,7 @@ const Footer = () => {
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
                     >
-                      About
+                      About Us
                     </a>
                   </li>
 

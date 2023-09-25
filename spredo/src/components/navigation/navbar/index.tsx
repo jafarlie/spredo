@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Dialog, Disclosure, Popover } from "@headlessui/react";
+import { Dialog, Popover } from "@headlessui/react";
+import Logo from "../../../../public/Logo.png";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -11,11 +13,7 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+import { PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 
 const products = [
   {
@@ -76,7 +74,7 @@ const Navbar = () => {
         <div className="flex lg:flex-1">
           <a href="/" className="">
             <span className="sr-only">Spredo</span>
-            <img className="h-8 w-auto" src="./Logo.png" alt="" />
+            <Image src={Logo} alt="" width={200} height={200}></Image>
           </a>
         </div>
         <div className="flex lg:hidden">

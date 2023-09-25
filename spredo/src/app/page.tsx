@@ -152,7 +152,7 @@ export default function Home() {
             >
               <path
                 fill="#fff7e1"
-                fill-opacity="1"
+                fillOpacity="1"
                 d="M0,160L80,176C160,192,320,224,480,208C640,192,800,128,960,128C1120,128,1280,192,1360,224L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
               ></path>
             </svg>
@@ -183,7 +183,9 @@ export default function Home() {
                         <p className="text-gray-500">{customer.position}</p>
                       </div>
                       <div className="mt-24 mb-12 text-xl">
-                        <p className="text-gray-800">"{customer.review}"</p>
+                        <p className="text-gray-800">
+                          &quot;{customer.review}&quot;
+                        </p>
                       </div>
                     </div>
                   ))}
