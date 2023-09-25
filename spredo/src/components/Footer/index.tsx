@@ -20,7 +20,7 @@ const Footer = () => {
                     className=""
                   ></Image>
                   <h2 className="text-2xl font-bold text-gray-900 mt-3">
-                    We are committed to excellence!
+                    At Spredo we are committed to excellence!
                   </h2>
 
                   <p className="mt-4 text-md text-gray-500">
