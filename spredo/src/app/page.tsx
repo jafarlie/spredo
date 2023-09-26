@@ -113,7 +113,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-bread">
+      <section id="about" className="bg-bread">
         <div className="bg-midnightGreen relative mx-auto">
           <div className="h-screen w-full flex">
             {/* Left-hand side */}

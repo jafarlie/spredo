@@ -93,26 +93,26 @@ const Navbar = () => {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-24">
           <Link
-            href="#about"
+            href="/#about"
             className="text-lg font-semibold leading-6"
             style={{ color: "white" }}
           >
             About Us
           </Link>
-          <Link
+          {/* <Link
             href="#products"
             className="text-lg font-semibold leading-6"
             style={{ color: "white" }}
           >
             Products
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             href="/blog"
             className="text-lg font-semibold leading-6"
             style={{ color: "white" }}
           >
             Blog
-          </Link>
+          </Link> */}
           <Link
             href="/contact"
             className="text-lg font-semibold leading-6"
@@ -121,14 +121,14 @@ const Navbar = () => {
             Contact Us
           </Link>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="sign-in"
             className="text-lg font-semibold leading-6 text-gray-900"
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
-        </div>
+        </div> */}
       </nav>
       <Dialog
         as="div"
