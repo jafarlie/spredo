@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import ContactImage from "../../../../public/Contact.jpg";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 const ContactForm = () => {
@@ -46,22 +44,16 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="relative flex h-screen w-full bg-cover bg-center justify-between">
-        {/* <Image
-          src={ContactImage}
-          alt="Contact Image"
-          layout="fill"
-          objectFit="cover"
-        ></Image> */}
-        {/* <div className="absolute inset-0 bg-black opacity-40"></div> */}
-        {/* Left column - 1/3 */}
+      <div className="bg-bread relative flex h-screen w-full bg-cover bg-center justify-between">
         <div className="w-1/3 flex justify-center z-10 items-center p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>
-            <h1 className="text-6xl font-bold pb-3">Send us a message 😎</h1>
+            <h1 className="text-3xl font-bold pb-3">Send us a message</h1>
             <h2 className="text-2xl mt-6 text-gray-600">
               Reach out to us with any questions you might have, whether you are
               an investor or want to learn more about our product.
             </h2>
+            <br></br>
+            <h3 className="text-lg">info@spredo.ca</h3>
           </div>
         </div>
 
@@ -69,7 +61,7 @@ const ContactForm = () => {
         <div className="w-2/3 px-12 py-6 z-10 h-5/6 justify-center align-center flex mt-14">
           <form
             onSubmit={handleSubmit}
-            className="w-2/3 px-3 py-3 rounded-lg"
+            className="w-2/3 px-3 py-3 rounded-lg border-2"
             style={{ color: "black" }}
           >
             <div className="flex mb-4 space-x-4">
@@ -87,7 +79,7 @@ const ContactForm = () => {
                   name="firstName"
                   value={firstName}
                   onChange={handleFirstNameChange}
-                  className="p-2 w-full border rounded-md"
+                  className="p-2 w-full border rounded-md bg-bread"
                 />
               </div>
 
@@ -104,7 +96,7 @@ const ContactForm = () => {
                   name="lastName"
                   value={lastName}
                   onChange={handleLastNameChange}
-                  className="p-2 w-full border rounded-md"
+                  className="p-2 w-full border rounded-md bg-bread"
                 />
               </div>
             </div>
@@ -123,7 +115,7 @@ const ContactForm = () => {
                 required
                 value={email}
                 onChange={handleEmailChange}
-                className="p-2 w-full border rounded-md"
+                className="p-2 w-full border rounded-md bg-bread"
               />
             </div>
 
@@ -141,7 +133,7 @@ const ContactForm = () => {
                 required
                 value={subject}
                 onChange={handleSubjectChange}
-                className="p-2 w-full border rounded-md"
+                className="p-2 w-full border rounded-md bg-bread"
               />
             </div>
 
@@ -159,7 +151,7 @@ const ContactForm = () => {
                 minLength={120}
                 value={body}
                 onChange={handleBodyChange}
-                className="p-2 w-full border rounded-md"
+                className="p-2 w-full border rounded-md bg-bread"
                 rows={5}
               ></textarea>
             </div>
