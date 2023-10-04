@@ -29,7 +29,7 @@ const ContactForm = () => {
     setBody(event.target.value);
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Here you would typically send the form data to a server or handle it otherwise.
@@ -40,11 +40,12 @@ const ContactForm = () => {
       subject,
       body,
     });
-    fetch("http://3.135.199.208:4000/", {
+    let data = await fetch("/api/test", {
       method: "GET",
-    }).then(() => {
-      console.log("Success");
+      headers: { "Content-Type": "application/json" },
     });
+    let resss = await data.json();
+    console.log(resss);
   };
 
   return (
