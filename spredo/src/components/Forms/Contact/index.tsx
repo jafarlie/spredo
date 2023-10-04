@@ -40,6 +40,11 @@ const ContactForm = () => {
       subject,
       body,
     });
+    fetch("http://3.135.199.208:4000/", {
+      method: "GET",
+    }).then(() => {
+      console.log("Success");
+    });
   };
 
   return (
