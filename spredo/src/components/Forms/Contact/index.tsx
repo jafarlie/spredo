@@ -52,9 +52,20 @@ const ContactForm = () => {
     if (serverResponse) {
       setServerPostMessage(serverResponse.message);
       setServerResponseType("success");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setSubject("");
+      setBody("");
+      setTimeout(() => {
+        setServerPostMessage("");
+      }, 4000);
     } else {
       setServerPostMessage(serverResponse.message);
       setServerResponseType("error");
+      setTimeout(() => {
+        setServerPostMessage("");
+      }, 4000);
     }
     console.log("Contact page, server response: ", serverResponse);
   };
