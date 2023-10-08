@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { Alert, Space } from "antd";
 
 const ContactForm = () => {
   // States for each input field
@@ -8,6 +9,9 @@ const ContactForm = () => {
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [body, setBody] = useState<string>("");
+  const [serverPostMessage, setServerPostMessage] = useState("");
+  const [serverResponseType, setServerResponseType] = useState("");
+
   // Event handlers
   const handleFirstNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFirstName(event.target.value);
@@ -32,24 +36,49 @@ const ContactForm = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Here you would typically send the form data to a server or handle it otherwise.
-    console.log({
-      firstName,
-      lastName,
-      email,
-      subject,
-      body,
-    });
+    const object = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      subject: subject,
+      body: body,
+    };
     let data = await fetch("/api/test", {
-      method: "GET",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(object),
     });
-    let resss = await data.json();
-    console.log(resss);
+    let { serverResponse } = await data.json();
+    if (serverResponse) {
+      setServerPostMessage(serverResponse.message);
+      setServerResponseType("success");
+    } else {
+      setServerPostMessage(serverResponse.message);
+      setServerResponseType("error");
+    }
+    console.log("Contact page, server response: ", serverResponse);
+  };
+
+  const onClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    setServerPostMessage("");
   };
 
   return (
     <>
+      <div className="flex bg-bread pt-12 pl-14">
+        {serverPostMessage && (
+          <div className="flex">
+            <Space direction="vertical" style={{ width: "100%" }}>
+              <Alert
+                message={serverPostMessage}
+                type={serverResponseType === "success" ? "success" : "error"}
+                closable
+                onClose={onClose}
+              />
+            </Space>
+          </div>
+        )}
+      </div>
       <div className="bg-bread relative flex h-screen w-full bg-cover bg-center justify-between">
         <div className="w-1/3 flex justify-center z-10 items-center p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>

@@ -1,4 +1,3 @@
-"use client";
 import Logo from "../../../public/Logo.png";
 import Image from "next/image";
 import React from "react";
