@@ -44,7 +44,7 @@ export default function Home() {
         <div className="mx-auto">
           <div className="h-screen w-screen flex">
             {/* Left Div */}
-            <div className="font-sans bg-gray-300 w-1/2 h-full flex justify-center items-start flex-col p-4 space-y-6 mb-6 ml-24">
+            <div className="font-sans bg-gray-300 w-1/2 h-full flex justify-center items-start flex-col p-4 space-y-6 mb-6 ml-32">
               <h1 className="text-6xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
@@ -59,13 +59,13 @@ export default function Home() {
               </button>
             </div>
             {/* Right Div */}
-            <div className="bg-gray-200 w-1/2 h-full">
+            <div className="bg-gray-200 w-1/2 h-full mr-32">
               {/* Content for the left div if any */}
               <Image
                 src={SpredoDeviceRed}
                 alt=""
-                width={800}
-                height={800}
+                width={1000}
+                height={1000}
                 className="mt-24"
               ></Image>
             </div>
