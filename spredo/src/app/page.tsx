@@ -2,6 +2,8 @@ import Image from "next/image";
 import nespressoMachine from "../../public/NespressoMachine.png";
 import sandwichMaking from "../../public/sandwichmaking.jpg";
 import storyOfFounders from "../../public/StoryOfFounders.jpg";
+import SpredoDevice from "../../public/SpredoDevice.png";
+import SpredoDeviceRed from "../../public/SpredoDevicered-removebg-preview.png";
 import { Carousel } from "antd";
 import React from "react";
 
@@ -60,10 +62,10 @@ export default function Home() {
             <div className="bg-gray-200 w-1/2 h-full">
               {/* Content for the left div if any */}
               <Image
-                src={nespressoMachine}
+                src={SpredoDeviceRed}
                 alt=""
-                width={500}
-                height={500}
+                width={800}
+                height={800}
                 className="mt-24"
               ></Image>
             </div>
