@@ -145,7 +145,6 @@ export default function Home() {
                   clumping unevenly or jam spilling over the sides, their
                   sandwich-making sessions were always a messy affair.
                 </p>
-                <br></br>
                 <p
                   style={{ color: "white" }}
                   className="mt-6 text-md font-bold"
