@@ -1,8 +1,6 @@
 import Image from "next/image";
-import nespressoMachine from "../../public/NespressoMachine.png";
-import sandwichMaking from "../../public/sandwichmaking.jpg";
-import storyOfFounders from "../../public/StoryOfFounders.jpg";
-import SpredoDevice from "../../public/SpredoDevice.png";
+import SpredoCartridge from "../../public/SpredoCartridges.png";
+import Founders from "../../public/AboutUsSection.png";
 import SpredoDeviceRed from "../../public/SpredoDevicered-removebg-preview.png";
 import { Carousel } from "antd";
 import React from "react";
@@ -73,22 +71,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-nutty">
         <div className="mx-auto">
-          <div className="w-full flex relative h-[350px] overflow-hidden">
-            <Image
-              alt="Sandwich making machine Spredo"
-              src={sandwichMaking}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            ></Image>
+          <div className=" w-screen flex">
+            <div className="w-1/2 h-full flex w-1/2 relative h-[450px] overflow-hidden">
+              <Image
+                alt="Sandwich making machine Spredo"
+                src={SpredoCartridge}
+                style={{ objectFit: "contain", height: "100%", width: "100%" }}
+                quality={100}
+              ></Image>
+            </div>
+            <div className="bg-midnightGreen w-1/2 flex items-center justify-center">
+              <h1
+                className="text-4xl mb-4 ml-24 font-extrabold tracking-wide"
+                style={{ color: "#dba76c" }}
+              >
+                New spreads delivered to your door monthly!
+              </h1>
+            </div>
           </div>
           <div
-            className="flex w-full font-bold h-[150px]"
+            className="flex w-full font-bold h-[180px]"
             style={{ color: "white" }}
           >
-            <div className="w-1/3 p-4 bg-darkJelly">
+            <div className="w-1/3 p-4 border-t-2 border-b-2 border-r-2 border-black bg-nutty">
               <div className="bg-blue-400 aspect-w-1 aspect-h-1">
                 <h1 className="text-xl">01</h1>
                 <div className="mt-9 text-xl">
@@ -96,7 +103,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-1/3 p-4 bg-nutty">
+            <div className="w-1/3 p-4 bg-midnightGreen border-r-2 border-b-2 border-t-2 border-black">
               <div className="aspect-w-1 aspect-h-1">
                 <h1 className="text-xl">02</h1>
                 <div className="mt-9 text-xl">
@@ -104,7 +111,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-1/3 p-4 bg-midnightGreen">
+            <div className="w-1/3 p-4 border-t-2 border-r-2 border-b-2 bg-darkJelly border-black">
               <div className="bg-blue-300 aspect-w-1 aspect-h-1">
                 <h1 className="text-xl">03</h1>
                 <div className="mt-9 text-xl">
@@ -120,21 +127,35 @@ export default function Home() {
           <div className="h-screen w-full flex">
             {/* Left-hand side */}
             <div className="w-1/2 p-4">
-              <div className="w-1/2 ml-32 mt-16">
+              <div className="w-1/2 ml-32 mt-8">
                 <h1
-                  className="text-4xl mb-4 font-extrabold tracking-wide"
+                  className="text-2xl mb-4 font-extrabold tracking-wide"
                   style={{ color: "#dba76c" }}
                 >
                   The Story of Two Guys Who were too Lazy to Make a Sandwich
                 </h1>
                 <p
                   style={{ color: "white" }}
-                  className="mt-12 text-lg font-bold"
+                  className="mt-6 text-md font-bold"
                 >
-                  Your content here. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Vivamus lacinia odio vitae vestibulum. Your
-                  content here. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+                  It all began in a small apartment kitchen. Zach and Elvin, two
+                  friends with a shared passion for culinary adventures, found
+                  themselves struggling time and again with the simple act of
+                  making a spread sandwich. Whether it was peanut butter
+                  clumping unevenly or jam spilling over the sides, their
+                  sandwich-making sessions were always a messy affair.
+                </p>
+                <br></br>
+                <p
+                  style={{ color: "white" }}
+                  className="mt-6 text-md font-bold"
+                >
+                  After countless hours of brainstorming and prototyping, Spredo
+                  was born. A solution that not only ensured a perfect spread
+                  sandwich every time but also introduced users to a world of
+                  diverse flavors through its subscription model. Through
+                  Spredo, the duo transformed their sandwich struggles into a
+                  culinary revolution, making sandwich-making a joy for many.
                 </p>
               </div>
             </div>
@@ -143,7 +164,7 @@ export default function Home() {
             <div className="w-1/2 relative">
               <Image
                 alt="founders"
-                src={storyOfFounders}
+                src={Founders}
                 className="absolute top-0 bottom-0 w-auto h-full object-cover"
               ></Image>
             </div>
