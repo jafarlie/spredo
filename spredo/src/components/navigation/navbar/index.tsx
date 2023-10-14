@@ -122,14 +122,18 @@ const Navbar = () => {
             Contact Us
           </Link>
         </Popover.Group>
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="sign-in"
-            className="text-lg font-semibold leading-6 text-gray-900"
-          >
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div> */}
+        {process.env.NODE_ENV === "development" ? (
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="/signin"
+              className="text-lg font-semibold leading-6 text-gray-900"
+            >
+              Log in <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
       </nav>
       <Dialog
         as="div"
@@ -162,7 +166,7 @@ const Navbar = () => {
                 >
                   About Us
                 </Link>
-                <Link
+                {/* <Link
                   href="#products"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
@@ -173,7 +177,7 @@ const Navbar = () => {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blog
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -181,14 +185,18 @@ const Navbar = () => {
                   Contact Us
                 </Link>
               </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
-              </div>
+              {process.env.NODE_ENV === "development" ? (
+                <div className="py-6">
+                  <a
+                    href="/signin"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Log in <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </Dialog.Panel>

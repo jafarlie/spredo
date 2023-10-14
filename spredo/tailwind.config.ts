@@ -15,7 +15,12 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-greycliff)']
-      }
+      },
+      variants: {
+        extend: {
+          textColor: ['hover'],
+        },
+      },
     },
     colors: {
       nutty: '#dba76c',
