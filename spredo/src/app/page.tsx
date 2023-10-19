@@ -1,9 +1,10 @@
 import Image from "next/image";
 import SpredoCartridge from "../../public/SpredoCartridges.png";
 import Founders from "../../public/AboutUsSection.png";
-import SpredoDeviceRed from "../../public/SpredoDevicered-removebg-preview.png";
+import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
 import { Carousel } from "antd";
 import React from "react";
+import "../app/landingPage.css";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -38,34 +39,33 @@ const data = [
 export default function Home() {
   return (
     <>
-      <section className="bg-bread">
-        <div className="mx-auto">
-          <div className="h-screen w-screen flex">
+      <section className="bg-bread lg:pb-0">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row h-screen w-full">
             {/* Left Div */}
-            <div className="font-sans bg-gray-300 w-1/2 h-full flex justify-center items-start flex-col p-4 space-y-6 mb-6 ml-32">
-              <h1 className="text-6xl font-bold pb-3">
+            <div className="font-sans bg-gray-300 flex-grow flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 lg:ml-32">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
-              <h2 className="text-2xl text-gray-600">
+              <h2 className="text-xl sm:text-2xl text-gray-600">
                 Making a sandwich has never been more fun.
               </h2>
               <button
                 style={{ color: "white" }}
-                className="px-8 text-xl w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="px-4 sm:px-6 lg:px-8 text-lg w-full sm:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 Treat Yourself Today
               </button>
             </div>
             {/* Right Div */}
-            <div className="bg-gray-200 w-1/2 h-full mr-32">
+            <div
+              className="flex-grow lg:w-2/3 lg:mr-2"
+              // style={{ position: "relative" }}
+            >
               {/* Content for the left div if any */}
-              <Image
-                src={SpredoDeviceRed}
-                alt=""
-                width={1000}
-                height={1000}
-                className="mt-24"
-              ></Image>
+              <div className="h-1/5 pt-10 sm:pt-2 pb-10">
+                <Image src={SpredoDeviceRed} alt="" className=""></Image>
+              </div>
             </div>
           </div>
         </div>
@@ -73,8 +73,16 @@ export default function Home() {
 
       <section className="bg-nutty">
         <div className="mx-auto">
-          <div className=" w-screen flex">
-            <div className="w-1/2 h-full flex w-1/2 relative h-[450px] overflow-hidden">
+          <div className="flex flex-col sm:flex-row w-screen">
+            <div className="bg-midnightGreen w-full sm:w-1/2 h-[50px] flex items-center justify-center order-1 sm:order-none">
+              <h1
+                className="lg:text-3xl sm-text-2xl mb-4 ml-0 sm:ml-24 font-extrabold tracking-wide"
+                style={{ color: "#dba76c" }}
+              >
+                New spreads delivered to your door monthly!
+              </h1>
+            </div>
+            <div className="w-1/2 h-full flex w-1/2 relative h-[450px] overflow-hidden  w-full sm:w-1/2 order-2 sm:order-none">
               <Image
                 alt="Sandwich making machine Spredo"
                 src={SpredoCartridge}
@@ -82,39 +90,32 @@ export default function Home() {
                 quality={100}
               ></Image>
             </div>
-            <div className="bg-midnightGreen w-1/2 flex items-center justify-center">
-              <h1
-                className="text-4xl mb-4 ml-24 font-extrabold tracking-wide"
-                style={{ color: "#dba76c" }}
-              >
-                New spreads delivered to your door monthly!
-              </h1>
-            </div>
           </div>
+
           <div
             className="flex w-full font-bold h-[180px]"
             style={{ color: "white" }}
           >
             <div className="w-1/3 p-4 border-t-2 border-b-2 border-r-2 border-black bg-nutty">
               <div className="bg-blue-400 aspect-w-1 aspect-h-1">
-                <h1 className="text-xl">01</h1>
-                <div className="mt-9 text-xl">
+                <h1 className="text-lg sm:text-xl">01</h1>
+                <div className="mt-4 sm:mt-9 text-lg sm:text-xl">
                   <span>No More Bread Tearing</span>
                 </div>
               </div>
             </div>
             <div className="w-1/3 p-4 bg-midnightGreen border-r-2 border-b-2 border-t-2 border-black">
               <div className="aspect-w-1 aspect-h-1">
-                <h1 className="text-xl">02</h1>
-                <div className="mt-9 text-xl">
+                <h1 className="text-lg sm:text-xl">02</h1>
+                <div className="mt-4 sm:mt-9 text-lg sm:text-xl">
                   <span>Say No More To Making Mess</span>
                 </div>
               </div>
             </div>
             <div className="w-1/3 p-4 border-t-2 border-r-2 border-b-2 bg-darkJelly border-black">
               <div className="bg-blue-300 aspect-w-1 aspect-h-1">
-                <h1 className="text-xl">03</h1>
-                <div className="mt-9 text-xl">
+                <h1 className="text-lg sm:text-xl">03</h1>
+                <div className="mt-4 sm:mt-9 text-lg sm:text-xl">
                   <span>Forget About Dishwashing</span>
                 </div>
               </div>
@@ -126,8 +127,8 @@ export default function Home() {
         <div className="bg-midnightGreen relative mx-auto">
           <div className="h-screen w-full flex">
             {/* Left-hand side */}
-            <div className="w-1/2 p-4">
-              <div className="w-1/2 ml-32 mt-8">
+            <div className="w-full sm:w-4/4 p-4 mx-4 sm:mx-0">
+              <div className="lg:w-1/2 sm:w-full lg:ml-32 sm:ml-4 mt-8">
                 <h1
                   className="text-2xl mb-4 font-extrabold tracking-wide"
                   style={{ color: "#dba76c" }}
@@ -160,7 +161,7 @@ export default function Home() {
             </div>
 
             {/* Right-hand side */}
-            <div className="w-1/2 relative">
+            <div className="hidden sm:block w-1/2 relative">
               <Image
                 alt="founders"
                 src={Founders}
@@ -181,9 +182,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="bg-bread">
         <div className="container mx-auto px-4">
-          <div className="h-[450px]">
+          <div className="h-[550px]">
             <div className="w-full text-center">
               <h1
                 className="text-4xl mb-4 font-extrabold tracking-wide"
@@ -193,9 +195,9 @@ export default function Home() {
               </h1>
               <div
                 style={contentStyle}
-                className="rounded-tl-3xl rounded-br-3xl"
+                className="rounded-tl-3xl rounded-br-3xl sm-h-400"
               >
-                <Carousel style={{ color: "white" }} autoplay>
+                <Carousel style={{ color: "white" }}>
                   {data.map((customer, idx) => (
                     <div key={idx} className="p-4 rounded shadow-lg">
                       <div className="text-center">

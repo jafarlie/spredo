@@ -1,0 +1,14 @@
+@media (min-width: 640px) {
+  .sm-h-50 {
+    height: 50px;
+  }
+  .sm-text-2xl {
+    font-size: 2.5rem;
+  }
+  .sm-mb-20 {
+    margin-bottom: 4rem;
+  }
+  sm-h-400 {
+    height: 400px;
+  }
+}
