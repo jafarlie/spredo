@@ -2,6 +2,7 @@ import Image from "next/image";
 import SpredoCartridge from "../../public/SpredoCartridges.png";
 import Founders from "../../public/AboutUsSection.png";
 import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
+import BusinessCardLogo from "../../public/BusinessCardBread3BGRemoved.png";
 import { Carousel } from "antd";
 import React from "react";
 import "../app/landingPage.css";
@@ -74,9 +75,17 @@ export default function Home() {
       <section className="bg-nutty">
         <div className="mx-auto">
           <div className="flex flex-col sm:flex-row w-screen">
-            <div className="bg-midnightGreen w-full sm:w-1/2 h-[50px] flex items-center justify-center order-1 sm:order-none">
+            {/* <div className="bg-midnightGreen w-full sm:w-1/2 h-[380px] flex items-center justify-center order-1 sm:order-none">
               <h1
                 className="lg:text-3xl sm-text-2xl mb-4 ml-0 sm:ml-24 font-extrabold tracking-wide"
+                style={{ color: "#dba76c" }}
+              >
+                New spreads delivered to your door monthly!
+              </h1>
+            </div> */}
+            <div className="bg-midnightGreen w-full sm:w-1/2 flex items-center justify-center order-1 sm:order-none">
+              <h1
+                className="text-4xl mb-4 ml-24 font-extrabold tracking-wide"
                 style={{ color: "#dba76c" }}
               >
                 New spreads delivered to your door monthly!
@@ -193,10 +202,7 @@ export default function Home() {
               >
                 Why Should You Get Spredo?
               </h1>
-              <div
-                style={contentStyle}
-                className="rounded-tl-3xl rounded-br-3xl sm-h-400"
-              >
+              <div className="rounded-tl-3xl rounded-br-3xl carouselParentContainer">
                 <Carousel style={{ color: "white" }}>
                   {data.map((customer, idx) => (
                     <div key={idx} className="p-4 rounded shadow-lg">

@@ -1,4 +1,13 @@
-@media (min-width: 640px) {
+.carouselParentContainer {
+  height: 300px;
+  margin-top: 50px;
+  line-height: 160px;
+  text-align:center;
+  background: #dba76c;
+  color: white;
+}
+
+@media (max-width: 640px) {
   .sm-h-50 {
     height: 50px;
   }
@@ -8,7 +17,16 @@
   .sm-mb-20 {
     margin-bottom: 4rem;
   }
-  sm-h-400 {
+  .sm-h-400 {
     height: 400px;
+  }
+  .carouselParentContainer {
+    height: 400px;
+  }
+  .text-4xl {
+    font-size: 1.0rem;
+  }
+  .ml-24 {
+    margin-left: 0;
   }
 }
