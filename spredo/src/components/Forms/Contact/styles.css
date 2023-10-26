@@ -1,0 +1,9 @@
+.max-h-800{
+  height: 600px;
+}
+
+@media (max-width: 640px) {
+  .max-h-800{
+    height: 850px;
+  }
+}

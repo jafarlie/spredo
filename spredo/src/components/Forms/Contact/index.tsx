@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Alert, Space } from "antd";
+import "./styles.css";
 
 const ContactForm = () => {
   // States for each input field
@@ -90,7 +91,7 @@ const ContactForm = () => {
           </div>
         )}
       </div>
-      <div className="bg-bread relative flex flex-col md:flex-row h-screen w-full bg-cover bg-center justify-between">
+      <div className="bg-bread relative flex flex-col md:flex-row h-screen max-h-800 w-full bg-cover bg-center justify-between">
         <div className="w-full md:w-1/3 flex justify-center z-10 items-center p-4 md:p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>
             <h1 className="text-3xl font-bold pb-3">Send us a message</h1>
@@ -103,7 +104,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right column - 2/3 */}
-        <div className="w-full md:w-2/3 px-4 md:px-12 py-6 z-10 justify-center align-center flex">
+        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 z-10 justify-center align-center flex">
           <form
             onSubmit={handleSubmit}
             className="w-2/3 px-3 py-3 rounded-lg border-2"
