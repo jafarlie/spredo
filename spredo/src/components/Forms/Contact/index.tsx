@@ -90,21 +90,20 @@ const ContactForm = () => {
           </div>
         )}
       </div>
-      <div className="bg-bread relative flex h-screen w-full bg-cover bg-center justify-between">
-        <div className="w-1/3 flex justify-center z-10 items-center p-4 bg-gray-200">
+      <div className="bg-bread relative flex flex-col md:flex-row h-screen w-full bg-cover bg-center justify-between">
+        <div className="w-full md:w-1/3 flex justify-center z-10 items-center p-4 md:p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>
             <h1 className="text-3xl font-bold pb-3">Send us a message</h1>
             <h2 className="text-2xl mt-6 text-gray-600">
               Reach out to us with any questions you might have, whether you are
               an investor or want to learn more about our product.
             </h2>
-            <br></br>
             <h3 className="text-lg">info@spredo.ca</h3>
           </div>
         </div>
 
         {/* Right column - 2/3 */}
-        <div className="w-2/3 px-12 py-6 z-10 h-5/6 justify-center align-center flex mt-14">
+        <div className="w-full md:w-2/3 px-4 md:px-12 py-6 z-10 justify-center align-center flex">
           <form
             onSubmit={handleSubmit}
             className="w-2/3 px-3 py-3 rounded-lg border-2"
