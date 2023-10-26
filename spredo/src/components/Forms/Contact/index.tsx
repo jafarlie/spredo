@@ -91,7 +91,7 @@ const ContactForm = () => {
           </div>
         )}
       </div>
-      <div className="bg-bread relative flex flex-col md:flex-row h-screen max-h-800 w-full bg-cover bg-center justify-between">
+      <div className="bg-bread relative flex flex-col md:flex-row h-screen max-h-800 w-full bg-cover bg-center justify-between mb-3">
         <div className="w-full md:w-1/3 flex justify-center z-10 items-center p-4 md:p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>
             <h1 className="text-3xl font-bold pb-3">Send us a message</h1>

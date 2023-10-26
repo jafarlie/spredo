@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${greycliff.variable} font-sans`}>
+      <body className={`${greycliff.variable} font-sans bg-bread`}>
         <Navigation />
         {children}
         <Footer />
