@@ -6,4 +6,9 @@
   .max-h-800{
     height: 850px;
   }
+  .contact-form{
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }

@@ -2,6 +2,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Alert, Space } from "antd";
 import "./styles.css";
+import CaptchaComponent from "@/components/Captcha/Recaptcha";
 
 const ContactForm = () => {
   // States for each input field
@@ -12,6 +13,7 @@ const ContactForm = () => {
   const [body, setBody] = useState<string>("");
   const [serverPostMessage, setServerPostMessage] = useState("");
   const [serverResponseType, setServerResponseType] = useState("");
+  const [captcha, setCaptcha] = useState("");
 
   // Event handlers
   const handleFirstNameChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -34,6 +36,12 @@ const ContactForm = () => {
     setBody(event.target.value);
   };
 
+  const handleCaptchaChange = (value: any) => {
+    console.log("Captcha value:", captcha);
+    setCaptcha(value);
+    // You can set this value in a state and send it to the backend for verification when the form is submitted
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -44,6 +52,12 @@ const ContactForm = () => {
       subject: subject,
       body: body,
     };
+    // let recaptchaResponse = await fetch("/api/captcha", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ captchaValue: captcha }),
+    // });
+
     let data = await fetch("/api/test", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -92,22 +106,23 @@ const ContactForm = () => {
         )}
       </div>
       <div className="bg-bread relative flex flex-col md:flex-row h-screen max-h-800 w-full bg-cover bg-center justify-between mb-3">
-        <div className="w-full md:w-1/3 flex justify-center z-10 items-center p-4 md:p-4 bg-gray-200">
+        <div className="w-full md:w-1/3 flex justify-center z-10 items-center px-2 md:p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>
             <h1 className="text-3xl font-bold pb-3">Send us a message</h1>
             <h2 className="text-2xl mt-6 text-gray-600">
               Reach out to us with any questions you might have, whether you are
               an investor or want to learn more about our product.
             </h2>
+            <br />
             <h3 className="text-lg">info@spredo.ca</h3>
           </div>
         </div>
 
         {/* Right column - 2/3 */}
-        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 px-3 z-10 justify-center align-center flex form-container">
+        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 px-4 z-10 justify-center align-center flex form-container">
           <form
             onSubmit={handleSubmit}
-            className="w-3/3 px-3 py-3 rounded-lg border-2"
+            className="w-2/3 px-3 py-3 rounded-lg border-2 contact-form"
             style={{ color: "black" }}
           >
             <div className="flex mb-4 space-x-4">
@@ -201,6 +216,7 @@ const ContactForm = () => {
                 rows={5}
               ></textarea>
             </div>
+            {/* <CaptchaComponent onChange={handleCaptchaChange} /> */}
 
             <button
               type="submit"
