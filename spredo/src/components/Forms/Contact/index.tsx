@@ -104,10 +104,10 @@ const ContactForm = () => {
         </div>
 
         {/* Right column - 2/3 */}
-        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 z-10 justify-center align-center flex">
+        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 z-10 justify-center align-center flex form-container">
           <form
             onSubmit={handleSubmit}
-            className="w-2/3 px-3 py-3 rounded-lg border-2"
+            className="w-3/3 px-3 py-3 rounded-lg border-2"
             style={{ color: "black" }}
           >
             <div className="flex mb-4 space-x-4">
