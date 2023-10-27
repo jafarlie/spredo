@@ -104,7 +104,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right column - 2/3 */}
-        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 z-10 justify-center align-center flex form-container">
+        <div className="flex-grow w-full md:w-2/3 md:px-12 py-6 px-3 z-10 justify-center align-center flex form-container">
           <form
             onSubmit={handleSubmit}
             className="w-3/3 px-3 py-3 rounded-lg border-2"
