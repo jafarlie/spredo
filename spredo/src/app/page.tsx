@@ -2,7 +2,6 @@ import Image from "next/image";
 import SpredoCartridge from "../../public/SpredoCartridges.png";
 import Founders from "../../public/AboutUsSection.png";
 import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
-import BusinessCardLogo from "../../public/BusinessCardBread3BGRemoved.png";
 import { Carousel } from "antd";
 import React from "react";
 import "../app/landingPage.css";
@@ -42,30 +41,34 @@ export default function Home() {
     <>
       <section className="bg-bread lg:pb-0">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row h-screen w-full">
+          <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
-            <div className="font-sans bg-gray-300 flex-grow flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 lg:ml-32">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
+            <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 lg:ml-32">
+              <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
-              <h2 className="text-xl sm:text-2xl text-gray-600">
+              <h2 className=" text-xl sm:text-3xl text-gray-600">
                 Making a sandwich has never been more fun.
               </h2>
               <button
                 style={{ color: "white" }}
-                className="px-4 sm:px-6 lg:px-8 text-lg w-full sm:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="landing-page-conversion-button px-4 sm:px-6 lg:px-8 text-lg w-full sm:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 Treat Yourself Today
               </button>
             </div>
             {/* Right Div */}
             <div
-              className="flex-grow lg:w-2/3 lg:mr-2"
+              className="flex-grow lg:w-2/3 lg:mr-2 order-1 md:order-2"
               // style={{ position: "relative" }}
             >
               {/* Content for the left div if any */}
-              <div className="h-1/5 pt-10 sm:pt-2 pb-10">
-                <Image src={SpredoDeviceRed} alt="" className=""></Image>
+              <div className="h-1/5 pt-10 sm:pt-2 pb-10 spredo-machine-container">
+                <Image
+                  src={SpredoDeviceRed}
+                  alt=""
+                  className="mt-6 spredo-machine"
+                ></Image>
               </div>
             </div>
           </div>
@@ -85,7 +88,7 @@ export default function Home() {
             </div> */}
             <div className="bg-midnightGreen w-full sm:w-1/2 flex items-center justify-center order-1 sm:order-none">
               <h1
-                className="text-4xl mb-4 ml-24 font-extrabold tracking-wide"
+                className="text-3xl sm-text-2xl sm:text-xl mb-4 ml-24 font-extrabold tracking-wide"
                 style={{ color: "#dba76c" }}
               >
                 New spreads delivered to your door monthly!

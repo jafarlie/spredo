@@ -11,9 +11,6 @@
   .sm-h-50 {
     height: 50px;
   }
-  .sm-text-2xl {
-    font-size: 2.5rem;
-  }
   .sm-mb-20 {
     margin-bottom: 4rem;
   }
@@ -24,10 +21,34 @@
     height: 400px;
   }
   .text-4xl {
-    font-size: 1.0rem;
+    font-size: 2.5rem;
     line-height: normal;
   }
+  /* .text-xl{
+    font-size: 1rem;
+  } */
   .ml-24 {
     margin-left: 0;
+  }
+  .sm-text-2xl {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .spredo-machine-container{
+    height: 0px;
+  }
+  .spredo-machine{
+    margin-top: 0;
+  }
+  .landing-page-headers{
+    margin-bottom: 0;
+    height: 20px;
+    justify-content: start;
+    margin-left: 2rem;
+  }
+  .landing-page-conversion-button{
+    width: 12rem;
+    height: 3rem;
+    font-size: 0.9rem;
   }
 }

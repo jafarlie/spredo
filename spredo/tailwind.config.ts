@@ -18,6 +18,7 @@ const config: Config = {
       },
       variants: {
         extend: {
+          display: ['responsive'],
           textColor: ['hover'],
         },
       },
