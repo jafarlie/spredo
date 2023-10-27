@@ -2,7 +2,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Alert, Space } from "antd";
 import "./styles.css";
-import CaptchaComponent from "@/components/Captcha/Recaptcha";
+// import CaptchaComponent from "@/components/Captcha/Recaptcha";
 
 const ContactForm = () => {
   // States for each input field

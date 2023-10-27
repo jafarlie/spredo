@@ -1,5 +1,5 @@
 // components/ReCaptcha.js
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 type CaptchaChangeHandler = (value: string | null) => void;
 type CaptchaComponentProps = {
@@ -9,10 +9,10 @@ type CaptchaComponentProps = {
 function CaptchaComponent({ onChange }: CaptchaComponentProps) {
   return (
     <div>
-      <ReCAPTCHA
+      {/* <ReCAPTCHA
         sitekey="6LcXENIoAAAAAM1KNlIpPAVfxw85GdDamfswFny5" // replace with your Site Key
         onChange={onChange}
-      />
+      /> */}
     </div>
   );
 }
