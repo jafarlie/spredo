@@ -39,7 +39,7 @@ const data = [
 export default function Home() {
   return (
     <>
-      <section className="bg-bread lg:pb-0">
+      <section className="bg-bread lg:pb-0 section-1">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             {/* Right Div */}
             <div
-              className="flex-grow lg:w-2/3 lg:mr-2 order-1 md:order-2"
+              className="spredo-machine-container-parent flex-grow lg:w-2/3 lg:mr-2 order-1 md:order-2"
               // style={{ position: "relative" }}
             >
               {/* Content for the left div if any */}

@@ -33,9 +33,11 @@
   .sm-text-2xl {
     font-size: 1.3rem;
     margin-top: 1rem;
+    margin-left:1rem;
   }
   .spredo-machine-container{
     height: 0px;
+    margin-bottom: -100px;
   }
   .spredo-machine{
     margin-top: 0;
@@ -50,5 +52,11 @@
     width: 12rem;
     height: 3rem;
     font-size: 0.9rem;
+  }
+  .section-1{
+    height: 750px;
+  }
+  .spredo-machine-container-parent{
+    margin-bottom: -100px;
   }
 }
