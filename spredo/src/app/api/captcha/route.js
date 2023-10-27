@@ -1,5 +1,5 @@
 // pages/api/verifyCaptcha.js
-import fetch from "isomorphic-unfetch";
+// import fetch from "isomorphic-unfetch";
 
 export async function POST(req, res) {
   if (req.method === "POST") {
