@@ -2,7 +2,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Alert, Space } from "antd";
 import "./styles.css";
-// import CaptchaComponent from "@/components/Captcha/Recaptcha";
 
 const ContactForm = () => {
   // States for each input field
@@ -34,12 +33,6 @@ const ContactForm = () => {
 
   const handleBodyChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setBody(event.target.value);
-  };
-
-  const handleCaptchaChange = (value: any) => {
-    console.log("Captcha value:", captcha);
-    setCaptcha(value);
-    // You can set this value in a state and send it to the backend for verification when the form is submitted
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -216,7 +209,6 @@ const ContactForm = () => {
                 rows={5}
               ></textarea>
             </div>
-            {/* <CaptchaComponent onChange={handleCaptchaChange} /> */}
 
             <button
               type="submit"

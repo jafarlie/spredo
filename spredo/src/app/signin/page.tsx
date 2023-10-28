@@ -1,6 +1,7 @@
 "use client";
 import { Input, Button, Form } from "antd";
 import React, { useState } from "react";
+import "./styles.css";
 
 export default function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -49,7 +50,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+    <div className="min-h-screen flex items-center justify-center bg-black bg-opacity-10">
       <div
         className="bg-midnightGreen p-12 rounded shadow-md max-w-2xl w-full"
         style={{ color: "white" }}
@@ -118,8 +119,9 @@ export default function Login() {
             <>
               Remembered?{" "}
               <span
-                className="text-blue-500 cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => setIsReset(false)}
+                style={{ color: "#dba76c" }}
               >
                 Go back to Sign In.
               </span>
@@ -130,7 +132,8 @@ export default function Login() {
                 ? "Don't have an account? "
                 : "Already have an account? "}
               <span
-                className="text-blue-500 cursor-pointer"
+                className="cursor-pointer"
+                style={{ color: "#dba76c" }}
                 onClick={toggleForm}
               >
                 {isLogin ? "Sign Up" : "Sign In"}
@@ -140,8 +143,9 @@ export default function Login() {
                   {" "}
                   or{" "}
                   <span
-                    className="text-blue-500 cursor-pointer"
+                    className=" cursor-pointer"
                     onClick={toggleReset}
+                    style={{ color: "#dba76c" }}
                   >
                     Forgot Password?
                   </span>
