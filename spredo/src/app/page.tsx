@@ -5,6 +5,7 @@ import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
 import { Carousel } from "antd";
 import React from "react";
 import "../app/landingPage.css";
+import Link from "next/link";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -43,7 +44,7 @@ export default function Home() {
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
-            <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 lg:ml-32">
+            <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 lg:ml-32 sm:mt-24">
               <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
@@ -54,7 +55,9 @@ export default function Home() {
                 style={{ color: "white" }}
                 className="landing-page-conversion-button px-4 sm:px-6 lg:px-8 text-lg w-full sm:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
-                Treat Yourself Today
+                <Link href="/contact" style={{ color: "white" }}>
+                  Treat Yourself Today
+                </Link>
               </button>
             </div>
             {/* Right Div */}
@@ -88,7 +91,7 @@ export default function Home() {
             </div> */}
             <div className="bg-midnightGreen w-full sm:w-1/2 flex items-center justify-center order-1 sm:order-none">
               <h1
-                className="text-3xl sm-text-2xl sm:text-xl mb-4 ml-24 font-extrabold tracking-wide"
+                className="lg:text-3xl text-4xl sm:text-xl mb-4 ml-6 font-extrabold tracking-wide"
                 style={{ color: "#dba76c" }}
               >
                 New spreads delivered to your door monthly!

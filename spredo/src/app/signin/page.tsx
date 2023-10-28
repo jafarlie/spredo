@@ -60,13 +60,13 @@ export default function Login() {
         <Form onFinish={handleSubmit} autoComplete="off">
           {!isLogin && !isReset && (
             <Form.Item
-              name="username"
+              name="fullname"
               rules={[
                 { required: true, message: "Please input your username!" },
               ]}
             >
               <Input
-                placeholder="Username"
+                placeholder="Fullname"
                 value={fullname}
                 onChange={(e) => setFullName(e.target.value)}
               />
