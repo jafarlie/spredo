@@ -45,7 +45,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
             <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
-              <h1 className="text-4xl md:text-4xl sm:text-5xl font-bold pb-3">
+              <h1 className="text-4xl md:text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
               <h2 className=" text-lg sm:text-xl md:text-lg text-gray-600">
@@ -91,10 +91,10 @@ export default function Home() {
             </div> */}
             <div className="bg-midnightGreen w-full sm:w-1/2 flex items-center justify-center order-1 sm:order-none">
               <h1
-                className="lg:text-3xl text-4xl sm:text-xl mb-4 ml-6 font-extrabold tracking-wide"
+                className="lg:text-3xl sm:text-xl mb-4 ml-6 font-extrabold tracking-wide monthlySpreads"
                 style={{ color: "#dba76c" }}
               >
-                New spreads delivered to your door monthly!
+                New spreads delivered monthly!
               </h1>
             </div>
             <div className="w-1/2 h-full flex w-1/2 relative h-[450px] overflow-hidden  w-full sm:w-1/2 order-2 sm:order-none">

@@ -15,6 +15,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
+import { Button } from "antd";
 
 const products = [
   {
@@ -62,6 +63,12 @@ const Navbar = () => {
   const [showHamburgerIcon, setShowHamburgerIcon] = useState(true);
 
   const toggleVisibility = () => {
+    setShowHamburgerIcon(!showHamburgerIcon);
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleMenuClick = () => {
+    console.log("HHHHH");
     setShowHamburgerIcon(!showHamburgerIcon);
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -118,6 +125,7 @@ const Navbar = () => {
             href="/contact"
             className="text-lg font-semibold leading-6"
             style={{ color: "white" }}
+            onClick={() => handleMenuClick()}
           >
             Contact Us
           </Link>
@@ -157,15 +165,18 @@ const Navbar = () => {
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 flow-root font-sans">
+          <div className="space-y-2 mt-6 flow-root font-sans">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link
-                  href="#about"
-                  className="-mx-3 block rounded-lg px-3 py-2 font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  About Us
-                </Link>
+                <button className="block" onClick={toggleVisibility}>
+                  <Link
+                    href="/#about"
+                    className="-mx-3 block rounded-lg px-3 py-2 font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    About Us
+                  </Link>
+                </button>
+
                 {/* <Link
                   href="#products"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -178,12 +189,14 @@ const Navbar = () => {
                 >
                   Blog
                 </Link> */}
-                <Link
-                  href="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Contact Us
-                </Link>
+                <button className="block" onClick={toggleVisibility}>
+                  <Link
+                    href="/contact"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Contact Us
+                  </Link>
+                </button>
               </div>
               {process.env.NODE_ENV === "development" ? (
                 <div className="py-6">
