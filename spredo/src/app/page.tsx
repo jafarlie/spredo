@@ -44,16 +44,16 @@ export default function Home() {
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
-            <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 lg:ml-32 sm:mt-24">
-              <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
+            <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
+              <h1 className="text-4xl md:text-4xl sm:text-5xl font-bold pb-3">
                 Reinventing Your Sandwich
               </h1>
-              <h2 className=" text-xl sm:text-3xl text-gray-600">
+              <h2 className=" text-lg sm:text-xl md:text-lg text-gray-600">
                 Making a sandwich has never been more fun.
               </h2>
               <button
                 style={{ color: "white" }}
-                className="landing-page-conversion-button px-4 sm:px-6 lg:px-8 text-lg w-full sm:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="landing-page-conversion-button px-4 sm:px-6 lg:px-8 w-full sm:w-3/4 md:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full"
               >
                 <Link href="/contact" style={{ color: "white" }}>
                   Treat Yourself Today
@@ -70,7 +70,7 @@ export default function Home() {
                 <Image
                   src={SpredoDeviceRed}
                   alt=""
-                  className="mt-6 spredo-machine"
+                  className="mt-12 spredo-machine"
                 ></Image>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </section>
       <section id="about" className="bg-bread">
-        <div className="bg-midnightGreen relative mx-auto">
+        <div className="bg-midnightGreen aboutUs relative mx-auto">
           <div className="h-screen w-full flex">
             {/* Left-hand side */}
             <div className="w-full sm:w-4/4 p-4 mx-4 sm:mx-0">

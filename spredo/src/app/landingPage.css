@@ -21,7 +21,7 @@
     height: 400px;
   }
   .text-4xl {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height: 5vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -51,14 +51,17 @@
     margin-left: 2rem;
   }
   .landing-page-conversion-button{
-    width: 12rem;
+    width: 18rem;
     height: 3rem;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   .section-1{
     height: 750px;
   }
   .spredo-machine-container-parent{
-    margin-bottom: -100px;
+    margin-bottom: -200px;
+  }
+  .aboutUs{
+    height: 700px;
   }
 }
