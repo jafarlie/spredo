@@ -2,6 +2,7 @@ import Image from "next/image";
 import SpredoCartridge from "../../public/SpredoCartridges.png";
 import Founders from "../../public/AboutUsSection.png";
 import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
+import NewsletterSubscription from "@/components/Forms/newsletterSubscribe";
 import { Carousel } from "antd";
 import React from "react";
 import "../app/landingPage.css";
@@ -197,7 +198,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="bg-bread">
         <div className="container mx-auto px-4">
           <div className="h-[550px]">
@@ -231,6 +231,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <NewsletterSubscription />
     </>
   );
 }
