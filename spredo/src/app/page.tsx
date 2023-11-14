@@ -49,24 +49,25 @@ const features = [
   {
     name: "Variety Choices",
     description:
-      "Spredo partners with world class manufacturers to deliver variety high quality spreads to you. All in one platform.",
+      "Spredo partners with world-class manufacturers to deliver a variety of high-quality spreads to you, all on one platform.",
     icon: ShoppingCartIcon,
   },
   {
     name: "Pick & Choose",
     description:
-      "Tired of the same spread? Simply pick & choose your spread delivery preference for the next month! It's that easy!",
+      "Tired of the same spread? Simply pick and choose your preferred spread delivery for the next month! It's that easy!",
     icon: LockClosedIcon,
   },
   {
     name: "Monthly Spread Delivery",
-    description: "New Spredo products delivered to your door every month.",
+    description:
+      "Each delivery brings a mix of classic and exotic flavors, ensuring a fresh twist to your daily meals. It's the perfect way to keep your pantry exciting.",
     icon: ArrowPathIcon,
   },
   {
     name: "No Commitment",
     description:
-      "Simply cancel your subscription if you are unsatisfied with the service Spredo offers. Truely no strings attached.",
+      "Easily cancel your subscription if you are unsatisfied with the service Spredo offers. Truly no strings attached.",
     icon: NoSymbolIcon,
   },
 ];
