@@ -7,6 +7,13 @@ import { Carousel } from "antd";
 import React from "react";
 import "../app/landingPage.css";
 import Link from "next/link";
+import {
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  ArrowPathIcon,
+  ShoppingCartIcon,
+  NoSymbolIcon,
+} from "@heroicons/react/24/outline";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -35,6 +42,32 @@ const data = [
     position: "CEO, SimpliDesign",
     review:
       "Rarely do you come across something that exceeds your expectations right out of the box. This does that and then some. Highly recommend!",
+  },
+];
+
+const features = [
+  {
+    name: "Variety Choices",
+    description:
+      "Spredo partners with world class manufacturers to deliver variety high quality spreads to you. All in one platform.",
+    icon: ShoppingCartIcon,
+  },
+  {
+    name: "Pick & Choose",
+    description:
+      "Tired of the same spread? Simply pick & choose your spread delivery preference for the next month! It's that easy!",
+    icon: LockClosedIcon,
+  },
+  {
+    name: "Monthly Spread Delivery",
+    description: "New Spredo products delivered to your door every month.",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "No Commitment",
+    description:
+      "Simply cancel your subscription if you are unsatisfied with the service Spredo offers. Truely no strings attached.",
+    icon: NoSymbolIcon,
   },
 ];
 
@@ -139,6 +172,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+        <div className="bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="mt-2 text-4xl font-bold tracking-normal text-gray-900 sm:text-4xl">
+                Benefits of Spredo
+              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Experience the ease of crafting delicious spreads with{" "}
+                {`Spredo's `}
+                diverse flavors - a simple way to elevate your sandwiches!
+              </p>
+            </div>
+            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                {features.map((feature) => (
+                  <div key={feature.name} className="relative pl-16">
+                    <dt className="text-base font-semibold leading-7 text-gray-900">
+                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                        <feature.icon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      {feature.name}
+                    </dt>
+                    <dd className="mt-2 text-base leading-7 text-gray-600">
+                      {feature.description}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="about" className="bg-bread">
         <div className="bg-midnightGreen aboutUs relative mx-auto">
           <div className="h-screen w-full flex">
@@ -206,7 +275,7 @@ export default function Home() {
                 className="text-4xl mb-4 font-extrabold tracking-wide"
                 style={{ color: "#05393c" }}
               >
-                Why Should You Get Spredo?
+                Customer Testimonials
               </h1>
               <div className="rounded-tl-3xl rounded-br-3xl carouselParentContainer">
                 <Carousel style={{ color: "white" }}>
