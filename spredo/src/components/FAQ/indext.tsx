@@ -9,7 +9,7 @@ const FAQComponent = () => {
           FAQ
         </h1>
       </div>
-      <div className="mx-auto px-6 lg:px-8 divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white mx-12 my-12">
+      <div className="px-6 lg:px-8 divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white mx-12 my-12">
         <details
           className="group p-6 [&_summary::-webkit-details-marker]:hidden"
           open
