@@ -14,6 +14,7 @@ import {
   ShoppingCartIcon,
   NoSymbolIcon,
 } from "@heroicons/react/24/outline";
+import FAQComponent from "@/components/FAQ/indext";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -302,6 +303,7 @@ export default function Home() {
         </div>
       </section>
       <NewsletterSubscription />
+      <FAQComponent />
     </>
   );
 }
