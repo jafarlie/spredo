@@ -83,7 +83,7 @@ export default function Home() {
             {/* Left Div */}
             <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
               <h1 className="text-4xl md:text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
-                Kitchen Office{" "}
+                Office Kitchen{" "}
                 <span style={{ color: "#dba76c" }}>Essential</span>
               </h1>
               <h2 className=" text-xl sm:text-xl md:text-xl text-gray-600">
