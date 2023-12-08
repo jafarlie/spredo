@@ -15,6 +15,7 @@ import {
   NoSymbolIcon,
 } from "@heroicons/react/24/outline";
 import FAQComponent from "@/components/FAQ/indext";
+import TrustedBy from "@/components/TrustedBy";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -82,10 +83,11 @@ export default function Home() {
             {/* Left Div */}
             <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
               <h1 className="text-4xl md:text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
-                Reinventing Your Sandwich
+                Kitchen Office{" "}
+                <span style={{ color: "#dba76c" }}>Essential</span>
               </h1>
-              <h2 className=" text-lg sm:text-xl md:text-lg text-gray-600">
-                Making a sandwich has never been more fun.
+              <h2 className=" text-xl sm:text-xl md:text-xl text-gray-600">
+                Increased employee happiness = more productivity
               </h2>
               <button
                 style={{ color: "white" }}
@@ -130,7 +132,7 @@ export default function Home() {
                 className="lg:text-3xl sm:text-xl mb-4 ml-6 font-extrabold tracking-wide monthlySpreads"
                 style={{ color: "#dba76c" }}
               >
-                New spreads delivered monthly!
+                Delivered Monthly to Your Office
               </h1>
             </div>
             <div className="w-1/2 h-full flex w-1/2 relative h-[450px] overflow-hidden  w-full sm:w-1/2 order-2 sm:order-none">
@@ -151,7 +153,7 @@ export default function Home() {
               <div className="bg-blue-400 aspect-w-1 aspect-h-1">
                 <h1 className="text-lg sm:text-xl">01</h1>
                 <div className="mt-4 sm:mt-9 text-lg sm:text-xl">
-                  <span>No More Bread Tearing</span>
+                  <span>Increased Employee Happiness</span>
                 </div>
               </div>
             </div>
@@ -159,7 +161,7 @@ export default function Home() {
               <div className="aspect-w-1 aspect-h-1">
                 <h1 className="text-lg sm:text-xl">02</h1>
                 <div className="mt-4 sm:mt-9 text-lg sm:text-xl">
-                  <span>Say No More To Making Mess</span>
+                  <span>Cool New Food Tech in Your Kitchen</span>
                 </div>
               </div>
             </div>
@@ -167,7 +169,7 @@ export default function Home() {
               <div className="bg-blue-300 aspect-w-1 aspect-h-1">
                 <h1 className="text-lg sm:text-xl">03</h1>
                 <div className="mt-4 sm:mt-9 text-lg sm:text-xl">
-                  <span>Forget About Dishwashing</span>
+                  <span>Great Company Perk</span>
                 </div>
               </div>
             </div>
@@ -209,6 +211,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="bg-nutty">
+        <TrustedBy></TrustedBy>
       </section>
       <section id="about" className="bg-bread">
         <div className="bg-midnightGreen aboutUs relative mx-auto">
