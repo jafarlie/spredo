@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import SpredoCartridge from "../../public/SpredoCartridges.png";
 import Founders from "../../public/AboutUsSection.png";
 import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
 import NewsletterSubscription from "@/components/Forms/newsletterSubscribe";
 import { Carousel } from "antd";
-import React from "react";
+import React, { useRef } from "react";
 import "../app/landingPage.css";
 import Link from "next/link";
 import {
@@ -75,29 +77,49 @@ const features = [
 ];
 
 export default function Home() {
+  const reasonsForSpredoRef = useRef<HTMLDivElement>(null);
+
+  const handleLearnMoreClick = (e: { preventDefault: () => void }) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    reasonsForSpredoRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <section className="bg-bread lg:pb-0 section-1">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
-            <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
-              <h1 className="text-4xl md:text-4xl sm:text-5xl lg:text-6xl font-bold pb-3">
-                Office Kitchen{" "}
-                <span style={{ color: "#dba76c" }}>Essential</span>
-              </h1>
-              <h2 className=" text-xl sm:text-xl md:text-xl text-gray-600">
-                Increased employee happiness = more productivity
-              </h2>
-              <button
-                style={{ color: "white" }}
-                className="landing-page-conversion-button px-4 sm:px-6 lg:px-8 w-full sm:w-3/4 md:w-3/4 lg:w-2/3 py-2 bg-darkJelly rounded-full"
-              >
-                <Link href="/contact" style={{ color: "white" }}>
-                  Treat Yourself Today
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl">
+                  Discover the new{" "}
+                  <span style={{ color: "#640223" }}>
+                    Office Kitchen Essential
+                  </span>
+                </h1>
+                <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                  Experience the finest spread tastes and snack convenience with
+                  Spredo.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-darkJelly px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                  href="/contact"
+                  style={{ color: "white" }}
+                >
+                  Inquire Now
                 </Link>
-              </button>
+                <Link
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                  href="/#reasonsForSpredo"
+                  onClick={handleLearnMoreClick}
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
+
             {/* Right Div */}
             <div
               className="spredo-machine-container-parent flex-grow lg:w-2/3 lg:mr-2 order-1 md:order-2"
@@ -148,6 +170,8 @@ export default function Home() {
           <div
             className="flex w-full font-bold h-[180px]"
             style={{ color: "white" }}
+            ref={reasonsForSpredoRef}
+            id="reasonsForSpredo"
           >
             <div className="w-1/3 p-4 border-t-2 border-b-2 border-r-2 border-black bg-nutty">
               <div className="bg-blue-400 aspect-w-1 aspect-h-1">
@@ -190,11 +214,14 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+              <dl className="grid max-w-xl grid-cols-1 gap-x-24 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-16">
                     <dt className="text-base font-semibold leading-7 text-gray-900">
-                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <div
+                        style={{ border: "1px solid black" }}
+                        className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+                      >
                         <feature.icon
                           className="h-6 w-6 text-white"
                           aria-hidden="true"
