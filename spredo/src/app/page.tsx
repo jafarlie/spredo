@@ -87,7 +87,7 @@ export default function Home() {
     <>
       <section className="bg-bread lg:pb-0 section-1">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
+          <div className="flex flex-col lg:flex-row h-screen sm:h-5/6 w-full md:flex-row">
             {/* Left Div */}
             <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
               <div className="space-y-2">
