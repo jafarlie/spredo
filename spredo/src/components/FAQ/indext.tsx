@@ -110,7 +110,7 @@ const FAQComponent = () => {
               to seamlessly dispense our gourmet spreads. With its ease of use,
               consistent performance, and minimal maintenance, the Spredo device
               is an ideal solution for busy office environments, making gourmet
-              snacking convenient and enjoyable. Here's how it works:
+              snacking convenient and enjoyable. Here&apos;s how it works:
             </p>
             <br></br>
             <p>
@@ -185,14 +185,14 @@ const FAQComponent = () => {
               If you encounter any issues with the Spredo machine, rest assured
               that our customer support team is here to help. We pride ourselves
               on responsive and helpful customer service to ensure that your
-              Spredo experience is always positive and hassle-free. Here's what
-              to do if the machine breaks:
+              Spredo experience is always positive and hassle-free. Here&apos;s
+              what to do if the machine breaks:
             </p>
             <br></br>
             <p>
               <strong>Contact Support</strong>: Reach out to our customer
               support team immediately. You can contact us via phone, email, or
-              through our website. Provide details about the issue you're
+              through our website. Provide details about the issue you&apos;re
               experiencing.
             </p>
             <p>
@@ -204,12 +204,12 @@ const FAQComponent = () => {
               <strong>Repair or Replacement</strong>: If the machine cannot be
               fixed through troubleshooting, we will arrange for a repair or
               replacement. Our goal is to ensure minimal disruption to your
-              office's snack routine.
+              office&apos;s snack routine.
             </p>
             <p>
-              <strong>Follow-Up</strong>: Once your machine is repaired or
-              replaced, we'll follow up to ensure everything is working smoothly
-              and that you're satisfied with the solution.
+              <strong>Follow-Up</strong>: After your machine is repaired or
+              replaced, we will follow up to ensure everything is working
+              smoothly and that you are satisfied with the solution.
             </p>
           </p>
         </details>
@@ -275,7 +275,7 @@ const FAQComponent = () => {
             </p>
             <p>
               <strong>3. Avoid Direct Sunlight and Heat</strong>: To preserve
-              the spreads' freshness, avoid storing the package in direct
+              the spreads&apos; freshness, avoid storing the package in direct
               sunlight or near any heat sources, such as ovens or stovetops.
             </p>
             <p>
@@ -332,7 +332,7 @@ const FAQComponent = () => {
               there are no separate or hidden delivery fees.
             </p>
             <p>
-              The total cost outlined in your contract covers everything – from
+              The total cost outlined in your contract covers everything - from
               the regular delivery of spread cartridges to any necessary
               maintenance services. By consolidating all fees into the contract,
               we ensure that you can budget effectively without any surprises.
@@ -381,7 +381,7 @@ const FAQComponent = () => {
           <p className="mt-4 leading-relaxed text-gray-700">
             <p>
               At Spredo, we offer a diverse range of gourmet spread flavors,
-              each with its unique blend of ingredients. It's important for our
+              each with its unique blend of ingredients. It&apos;s important for our
               customers to be aware that some of these ingredients may contain
               allergens. At Spredo, we are committed to providing high-quality,
               flavorful options while prioritizing the health and safety of our
