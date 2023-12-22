@@ -3,7 +3,7 @@ export default function TrustedBy() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h1
-          className="text-4xl font-bold tracking-normal text-gray-900 sm:text-4xl text-center"
+          className="text-2xl font-bold tracking-normal text-gray-900 sm:text-4xl text-center"
           style={{ color: "white" }}
         >
           Trusted by the worlds most innovative teams
