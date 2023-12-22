@@ -18,6 +18,7 @@ import {
 } from "@heroicons/react/24/outline";
 import FAQComponent from "@/components/FAQ/indext";
 import TrustedBy from "@/components/TrustedBy";
+import ProductListComponent from "@/components/ProductList";
 
 const contentStyle: React.CSSProperties = {
   height: "300px",
@@ -201,10 +202,19 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="bg-white py-24 sm:py-32">
+        <ProductListComponent></ProductListComponent>
+      </section>
+      <section>
+        <div
+          className="bg-midnightGreen py-24 sm:py-32"
+          style={{ color: "white" }}
+        >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mt-2 text-4xl font-bold tracking-normal text-gray-900 sm:text-4xl">
+              <p
+                className="mt-2 text-4xl font-bold tracking-normal text-gray-900 sm:text-4xl"
+                style={{ color: "#dba76c" }}
+              >
                 Benefits of Spredo
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -219,7 +229,7 @@ export default function Home() {
                   <div key={feature.name} className="relative pl-16">
                     <dt className="text-base font-semibold leading-7 text-gray-900">
                       <div
-                        style={{ border: "1px solid black" }}
+                        style={{ border: "1px solid #dba76c" }}
                         className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
                       >
                         <feature.icon
