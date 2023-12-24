@@ -2,6 +2,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Alert, Space } from "antd";
 import "./styles.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
   // States for each input field
@@ -12,7 +13,12 @@ const ContactForm = () => {
   const [body, setBody] = useState<string>("");
   const [serverPostMessage, setServerPostMessage] = useState("");
   const [serverResponseType, setServerResponseType] = useState("");
-  const [captcha, setCaptcha] = useState("");
+  const [captcha, setCaptcha] = useState<string | null>();
+
+  const siteKey =
+    process.env.NODE_ENV === "development"
+      ? process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY!
+      : process.env.RECAPTCHA_SITE_KEY!;
 
   // Event handlers
   const handleFirstNameChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -37,6 +43,13 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!captcha) {
+      setServerPostMessage("Please Validate Captcha");
+      setTimeout(() => {
+        setServerPostMessage("");
+      }, 4000);
+      return;
+    }
 
     const object = {
       firstName: firstName,
@@ -84,20 +97,6 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="flex bg-bread pt-12 pl-14">
-        {serverPostMessage && (
-          <div className="flex">
-            <Space direction="vertical" style={{ width: "100%" }}>
-              <Alert
-                message={serverPostMessage}
-                type={serverResponseType === "success" ? "success" : "error"}
-                closable
-                onClose={onClose}
-              />
-            </Space>
-          </div>
-        )}
-      </div>
       <div className="bg-bread relative flex flex-col md:flex-row h-screen max-h-800 w-full bg-cover bg-center justify-between mb-3">
         <div className="w-full md:w-1/3 flex justify-center z-10 items-center px-2 md:p-4 bg-gray-200">
           <div className="ml-12 mb-6" style={{ color: "black" }}>
@@ -118,6 +117,20 @@ const ContactForm = () => {
             className="w-2/3 px-3 py-3 rounded-lg border-2 contact-form"
             style={{ color: "black" }}
           >
+            {serverPostMessage && (
+              <div className="flex pb-6">
+                <Space direction="vertical" style={{ width: "100%" }}>
+                  <Alert
+                    message={serverPostMessage}
+                    type={
+                      serverResponseType === "success" ? "success" : "error"
+                    }
+                    closable
+                    onClose={onClose}
+                  />
+                </Space>
+              </div>
+            )}
             <div className="flex mb-4 space-x-4">
               <div className="flex-1">
                 <label
@@ -209,11 +222,15 @@ const ContactForm = () => {
                 rows={5}
               ></textarea>
             </div>
-
+            <ReCAPTCHA
+              sitekey={siteKey}
+              className="mx-auto"
+              onChange={setCaptcha}
+            ></ReCAPTCHA>
             <button
               type="submit"
               style={{ color: "white" }}
-              className="px-8 text-lg w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              className="px-8 text-lg mt-6 w-1/2 py-2 bg-darkJelly rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             >
               Submit
             </button>
