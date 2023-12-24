@@ -221,7 +221,7 @@ const ContactForm = () => {
               sitekey={
                 process.env.NODE_ENV === "development"
                   ? process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY!
-                  : process.env.RECAPTCHA_SITE_KEY!
+                  : process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!
               }
               className="mx-auto"
               onChange={setCaptcha}
