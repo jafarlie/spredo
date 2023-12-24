@@ -237,7 +237,12 @@ export default function Home() {
                           aria-hidden="true"
                         />
                       </div>
-                      {feature.name}
+                      <p
+                        className="font-black text-xl"
+                        style={{ color: "#dba76c" }}
+                      >
+                        {feature.name}
+                      </p>
                     </dt>
                     <dd className="mt-2 text-base leading-7 text-gray-600">
                       {feature.description}
@@ -259,15 +264,12 @@ export default function Home() {
             <div className="w-full sm:w-4/4 p-4 mx-4 sm:mx-0">
               <div className="lg:w-1/2 sm:w-full lg:ml-32 sm:ml-4 mt-8">
                 <h1
-                  className="text-2xl mb-4 font-extrabold tracking-wide"
+                  className="text-4xl mb-4 font-extrabold tracking-wide"
                   style={{ color: "#dba76c" }}
                 >
                   The Story of Two Guys Who were too Lazy to Make a Sandwich
                 </h1>
-                <p
-                  style={{ color: "white" }}
-                  className="mt-6 text-md font-bold"
-                >
+                <p style={{ color: "white" }} className="mt-6 text-md">
                   It all began in a small apartment kitchen. Zach and Elvin, two
                   friends with a shared passion for culinary adventures, found
                   themselves struggling time and again with the simple act of
@@ -275,10 +277,7 @@ export default function Home() {
                   clumping unevenly or jam spilling over the sides, their
                   sandwich-making sessions were always a messy affair.
                 </p>
-                <p
-                  style={{ color: "white" }}
-                  className="mt-6 text-md font-bold"
-                >
+                <p style={{ color: "white" }} className="mt-6 text-md">
                   After countless hours of brainstorming and prototyping, Spredo
                   was born. A solution that not only ensured a perfect spread
                   sandwich every time but also introduced users to a world of

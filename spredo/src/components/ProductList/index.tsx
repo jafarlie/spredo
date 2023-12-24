@@ -2,7 +2,6 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/MV55dIIN7rr
  */
-import Link from "next/link";
 import Image from "next/image";
 import PeanutButterProduct from "../../../public/PeanutButterNew.png";
 import StrawberryJamProduct from "../../../public/StrawberryJamProduct.png";
@@ -40,7 +39,7 @@ const ProductListComponent = () => {
             <h3 className="font-semibold text-lg md:text-xl">
               Insane Peanut Butter
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-gray-500 dark:text-gray-400 text-md">
               Indulge in the creamy and rich flavor of our Spredo peanut butter.
               Will keep you coming for more!
             </p>
@@ -58,7 +57,7 @@ const ProductListComponent = () => {
           />
           <div className="p-4">
             <h3 className="font-semibold text-lg md:text-xl">Yum Strawberry</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               Strawberry Yum is a celebration of simplicity and joy. Enjoy the
               freshness and sweet tang of our strawberry flavor.
             </p>
@@ -75,7 +74,7 @@ const ProductListComponent = () => {
           />
           <div className="bg-white p-4 dark:bg-gray-950">
             <h3 className="font-semibold text-lg md:text-xl">Almond Butter</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               The exquisite almond butter will satisfy your taste buds.
               Healthier than ever!
             </p>
@@ -92,7 +91,7 @@ const ProductListComponent = () => {
           />
           <div className="bg-white p-4 dark:bg-gray-950">
             <h3 className="font-semibold text-lg md:text-xl">Cherry Berry</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               This classic will bring back the memories of childhood. Enjoy the
               sweet and sour cherry flavor.
             </p>
@@ -111,7 +110,7 @@ const ProductListComponent = () => {
             <h3 className="font-semibold text-lg md:text-xl">
               Golden Orchard Apricot Jam
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               Each spread is a harmonious blend of rich flavors and velvety
               textures, capturing the essence of golden summer mornings.
             </p>
@@ -128,7 +127,7 @@ const ProductListComponent = () => {
           />
           <div className="bg-white p-4 dark:bg-gray-950">
             <h3 className="font-semibold text-lg md:text-xl">Very Berry Jam</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               A symphony of sweet and tart flavors, crafted from a carefully
               selected blend of ripe, juicy berries.
             </p>
@@ -145,7 +144,7 @@ const ProductListComponent = () => {
           />
           <div className="bg-white p-4 dark:bg-gray-950">
             <h3 className="font-semibold text-lg md:text-xl">No Nut Butter</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               Made from high-quality soybeans, this buttery delight captures the
               essence of traditional nut butter without any peanuts.
             </p>
@@ -164,7 +163,7 @@ const ProductListComponent = () => {
             <h3 className="font-semibold text-lg md:text-xl">
               Green Olive Tepanade
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               Rich, savory flavors of finely chopped green olives with the
               subtle tang of lemon and the aromatic warmth of garlic.
             </p>
@@ -181,7 +180,7 @@ const ProductListComponent = () => {
           />
           <div className="bg-white p-4 dark:bg-gray-950">
             <h3 className="font-semibold text-lg md:text-xl">Genovese Pesto</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-md text-gray-500 dark:text-gray-400">
               This is a classic Italian delight, capturing the essence of fresh
               Genovese basil, rich olive oil, and aromatic garlic.
             </p>
