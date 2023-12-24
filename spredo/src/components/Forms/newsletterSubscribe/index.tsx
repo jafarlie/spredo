@@ -4,15 +4,23 @@ import { Space } from "antd";
 import Alert from "antd/es/alert/Alert";
 import { useState } from "react";
 import Spinner from "@/components/Spinner";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function NewsletterSubscription() {
   const [email, setEmail] = useState("");
   const [serverError, setServerError] = useState("");
   const [serverResponseType, setServerResponseType] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [captcha, setCaptcha] = useState<string | null>();
+  const [showCaptcha, setShowCaptcha] = useState(false);
 
-  const handleSubmit = async () => {
-    console.log("email: ", email);
+  const handleSubmit = async (e: any) => {
+    //e.preventDefault();
+    if (!captcha) {
+      setShowCaptcha(true);
+      return;
+    }
+
     const emailValid = checkEmailValidity();
     if (emailValid) {
       setIsLoading(true);
@@ -40,6 +48,8 @@ export default function NewsletterSubscription() {
         setEmail("");
         setIsLoading(false);
       }
+      setCaptcha("");
+      setShowCaptcha(false);
     } else {
       setServerError("Invalid email.");
     }
@@ -106,13 +116,25 @@ export default function NewsletterSubscription() {
               ) : (
                 <button
                   type="submit"
-                  onClick={() => handleSubmit()}
+                  onClick={(e) => handleSubmit(e)}
                   className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 bg-darkJelly"
                 >
                   Subscribe
                 </button>
               )}
             </div>
+            {showCaptcha && (
+              <div className="mt-6 flex max-w-md gap-x-4">
+                <ReCAPTCHA
+                  sitekey={
+                    process.env.NODE_ENV === "development"
+                      ? process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY!
+                      : process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!
+                  }
+                  onChange={setCaptcha}
+                ></ReCAPTCHA>
+              </div>
+            )}
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
             <div className="flex flex-col items-start">
