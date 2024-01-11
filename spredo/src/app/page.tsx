@@ -92,15 +92,15 @@ export default function Home() {
             {/* Left Div */}
             <div className="landing-page-headers md:order-1 order-2 font-sans flex-grow flex-shrink-0 flex justify-center items-start flex-col p-4 space-y-6 mb-6 lg:w-1/3 md:w-1/3 lg:ml-32 sm:mt-3">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl mb-6">
                   Discover the new{" "}
                   <span style={{ color: "#640223" }}>
                     Office Kitchen Essential
                   </span>
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Experience the finest spread tastes and snack convenience with
-                  Spredo.
+                  Elevate Your Office Kitchen with Gourmet Delights, Effortless
+                  Management, Boost Employee Satisfaction at a Smart Cost
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
