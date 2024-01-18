@@ -17,9 +17,12 @@ const ProductListComponent = () => {
   return (
     <>
       <div className="mx-auto max-w-2xl text-center mt-32 mb-24">
-        <p className="mt-2 text-4xl font-bold tracking-normal text-gray-900 sm:text-4xl">
+        <h2
+          className="text-3xl font-bold tracking-tighter sm:text-5xl"
+          style={{ color: "#640223" }}
+        >
           Our Products
-        </p>
+        </h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           Through Spredo you will have access to a world of Spreads thanks to
           our partnerships with various manufacturers. Enjoy your Spredo!

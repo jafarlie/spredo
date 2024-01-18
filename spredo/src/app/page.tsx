@@ -5,6 +5,7 @@ import SpredoCartridge from "../../public/SpredoCartridges.png";
 import Founders from "../../public/AboutUsSection.png";
 import SpredoDeviceRed from "../../public/DarkJellyBgRemoved.png";
 import NewsletterSubscription from "@/components/Forms/newsletterSubscribe";
+import WhyUs from "@/components/WhyOurProduct";
 import { Carousel } from "antd";
 import React, { useRef } from "react";
 import "../app/landingPage.css";
@@ -14,6 +15,7 @@ import {
   LockClosedIcon,
   ArrowPathIcon,
   ShoppingCartIcon,
+  Cog8ToothIcon,
   NoSymbolIcon,
 } from "@heroicons/react/24/outline";
 import FAQComponent from "@/components/FAQ/indext";
@@ -64,16 +66,16 @@ const features = [
     icon: LockClosedIcon,
   },
   {
-    name: "Monthly Spread Delivery",
+    name: "Monthly Restocking",
     description:
       "Each delivery brings a mix of classic and exotic flavors, ensuring a fresh twist to your daily meals. It's the perfect way to keep your pantry exciting.",
     icon: ArrowPathIcon,
   },
   {
-    name: "No Commitment",
+    name: "Maintenance",
     description:
-      "Easily cancel your subscription if you are unsatisfied with the service Spredo offers. Truly no strings attached.",
-    icon: NoSymbolIcon,
+      "Spredo is dedicated to provide best customer experience. If there are issues with the device, give us a call and we will get it fixed.",
+    icon: Cog8ToothIcon,
   },
 ];
 
@@ -86,7 +88,7 @@ export default function Home() {
   };
   return (
     <>
-      <section className="bg-bread lg:pb-0 section-1">
+      <section className="lg:pb-0 section-1">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row h-screen w-full md:flex-row">
             {/* Left Div */}
@@ -98,7 +100,10 @@ export default function Home() {
                     Office Kitchen Essential
                   </span>
                 </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p
+                  className="max-w-[600px] text-gray-500 dark:text-gray-400"
+                  style={{ fontSize: "18px" }}
+                >
                   Elevate Your Office Kitchen with Gourmet Delights, Effortless
                   Management, Boost Employee Satisfaction at a Smart Cost
                 </p>
@@ -138,6 +143,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+        <WhyUs />
+      </section>
 
       <section className="bg-nutty">
         <div className="mx-auto">
@@ -150,10 +158,10 @@ export default function Home() {
                 New spreads delivered to your door monthly!
               </h1>
             </div> */}
-            <div className="bg-midnightGreen w-full sm:w-1/2 flex items-center justify-center order-1 sm:order-none">
+            <div className="bg-bread w-full sm:w-1/2 flex items-center justify-center order-1 sm:order-none">
               <h1
                 className="lg:text-3xl sm:text-xl mb-4 ml-6 font-extrabold tracking-wide monthlySpreads"
-                style={{ color: "#dba76c" }}
+                style={{ color: "black" }}
               >
                 Delivered Monthly to Your Office
               </h1>
@@ -211,12 +219,12 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p
-                className="mt-2 text-4xl font-bold tracking-normal text-gray-900 sm:text-4xl"
+              <h2
+                className="text-3xl font-bold tracking-tighter sm:text-5xl"
                 style={{ color: "#dba76c" }}
               >
                 Benefits of Spredo
-              </p>
+              </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Experience the ease of crafting delicious spreads with{" "}
                 {`Spredo's `}
@@ -237,12 +245,13 @@ export default function Home() {
                           aria-hidden="true"
                         />
                       </div>
-                      <p
-                        className="font-black text-xl"
+
+                      <h1
+                        className="text-2xl font-semibold mb-2"
                         style={{ color: "#dba76c" }}
                       >
-                        {feature.name}
-                      </p>
+                        <strong>{feature.name}</strong>
+                      </h1>
                     </dt>
                     <dd className="mt-2 text-base leading-7 text-gray-600">
                       {feature.description}

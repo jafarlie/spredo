@@ -29,7 +29,7 @@ const config: Config = {
       midnightGreen: '#05393c',
       bread: '#fff7e1',
       light: '#ffffff',
-      black: '#000000'
+      black: '#000000',
     },
   },
   plugins: [],

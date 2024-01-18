@@ -381,12 +381,12 @@ const FAQComponent = () => {
           <p className="mt-4 leading-relaxed text-gray-700">
             <p>
               At Spredo, we offer a diverse range of gourmet spread flavors,
-              each with its unique blend of ingredients. It&apos;s important for our
-              customers to be aware that some of these ingredients may contain
-              allergens. At Spredo, we are committed to providing high-quality,
-              flavorful options while prioritizing the health and safety of our
-              consumers. Your wellbeing is our top priority. Here are a few key
-              points to consider:
+              each with its unique blend of ingredients. It&apos;s important for
+              our customers to be aware that some of these ingredients may
+              contain allergens. At Spredo, we are committed to providing
+              high-quality, flavorful options while prioritizing the health and
+              safety of our consumers. Your wellbeing is our top priority. Here
+              are a few key points to consider:
             </p>
             <br></br>
             <p>
