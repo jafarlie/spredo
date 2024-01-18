@@ -14,7 +14,8 @@ export default function Component() {
           </h2>
           <p className="max-w-[900px] mt-6 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             Our product offers a range of features designed to help you achieve
-            more in less time. Let's explore what makes our product stand out.
+            more in less time. Let&apos;s explore what makes our product stand
+            out.
           </p>
         </div>
 
@@ -92,7 +93,8 @@ export default function Component() {
             <h3 className="text-2xl font-semibold mb-2">Device Maintenance</h3>
             <p className="text-gray-500 dark:text-gray-400">
               We provide free maintenance for your Spredo device. Should any
-              issue arise, rest assured, we've got your back. Free of charge!
+              issue arise, rest assured, we&apos;ve got your back. Free of
+              charge!
             </p>
           </div>
         </div>
